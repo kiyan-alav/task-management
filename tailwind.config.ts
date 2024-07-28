@@ -15,6 +15,8 @@ const config: Config = {
         palette: {
           50: "#9C2CF3",
           100: "#3A49F9",
+          200: "#F2F5FF",
+          300: "#2E3A59"
         },
       },
     },

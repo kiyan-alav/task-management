@@ -10,9 +10,9 @@ function Register() {
   const [password, setPassword] = useState<string>("");
   const [rePassword, setRePassword] = useState<string>("");
 
-  const submitRegisterHandler = function () {
+  const submitRegisterHandler = async function () {
     if (password === rePassword) {
-      fetch("http://localhost:5000/users", {
+      const response = await fetch("http://localhost:5000/users", {
         method: "POST",
         body: JSON.stringify({
           username: username,
@@ -22,6 +22,9 @@ function Register() {
           "Content-Type": "application/json",
         },
       });
+      if (response.status === 201) {
+        route.push("/");
+      }
     }
     setUsername("");
     setPassword("");

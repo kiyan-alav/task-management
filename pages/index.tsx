@@ -1,4 +1,5 @@
 import { Button, Input } from "@nextui-org/react";
+import axios from "axios";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -17,6 +18,8 @@ const Login: NextPage<LoginComp> = ({ usersData }) => {
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+
+  // console.log(usersData);
 
   const submitLoginHandler = function () {
     const acceptedUser = usersData.find(
@@ -88,6 +91,7 @@ export default Login;
 
 export async function getServerSideProps() {
   try {
+    // const response = await axios.get("http://localhost:5000/users");
     const response = await fetch("http://localhost:5000/users");
     const data = await response.json();
 
