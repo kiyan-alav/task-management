@@ -10,7 +10,8 @@ interface DashboardType {
     title: string;
     description: string;
     date: string;
-    hour: string;
+    endTime: string;
+    startTime: string;
     status: boolean;
   }[];
 }
@@ -43,11 +44,11 @@ const Dashboard: NextPage<DashboardType> = ({ tasks }) => {
             />
           </div>
           <div className="flex items-center gap-8">
-            <Link className="text-palette-300 font-semibold" href="">
+            <Link className="text-palette-300 font-semibold" href="/tasks">
               Home
             </Link>
             <span className="w-0.5 h-5 bg-palette-300"></span>
-            <Link className="text-palette-300 font-semibold" href="">
+            <Link className="text-palette-300 font-semibold" href="/new-task">
               New Task
             </Link>
           </div>
@@ -90,7 +91,7 @@ const Dashboard: NextPage<DashboardType> = ({ tasks }) => {
                     {task.description}
                   </p>
                   <span className="text-white font-normal text-base">
-                    {task.date} / {task.hour}
+                    {task.date} / {task.startTime} - {task.endTime}
                   </span>
                 </div>
               ))}
@@ -107,7 +108,7 @@ const Dashboard: NextPage<DashboardType> = ({ tasks }) => {
                       {task.description}
                     </p>
                     <span className="text-white font-normal text-base">
-                      {task.date} / {task.hour}
+                      {task.date} / {task.startTime} - {task.endTime}
                     </span>
                   </div>
                 ))}
@@ -124,7 +125,7 @@ const Dashboard: NextPage<DashboardType> = ({ tasks }) => {
                       {task.description}
                     </p>
                     <span className="text-white font-normal text-base">
-                      {task.date} / {task.hour}
+                      {task.date} / {task.startTime} - {task.endTime}
                     </span>
                   </div>
                 ))}

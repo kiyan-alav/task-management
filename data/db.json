@@ -27,7 +27,8 @@
       "title": "lorem lorem lorem",
       "description": "Lorem ipsum dolor sit amet, consect",
       "date": "2024-07-06",
-      "hour": "10:20 - 12:00",
+      "endTime": "12:00",
+      "startTime": "10:20",
       "status": false
     },
     {
@@ -35,7 +36,8 @@
       "title": "lorem lorem lorem",
       "description": "Lorem ipsum dolor sit amet, consect",
       "date": "2024-07-06",
-      "hour": "10:20 - 12:00",
+      "endTime": "12:00",
+      "startTime": "10:20",
       "status": true
     },
     {
@@ -45,6 +47,14 @@
       "date": "2024-07-06",
       "hour": "10:20 - 12:00",
       "status": false
+    },
+    {
+      "date": "2024-07-30",
+      "description": "this is a simple description",
+      "endTime": "12:00",
+      "startTime": "10:20",
+      "title": "task1",
+      "id": 4
     }
   ]
 }

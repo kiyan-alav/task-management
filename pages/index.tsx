@@ -19,7 +19,7 @@ const Login: NextPage<LoginComp> = ({ usersData }) => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  // console.log(usersData);
+  console.log(usersData);
 
   const submitLoginHandler = function () {
     const acceptedUser = usersData.find(
@@ -92,6 +92,9 @@ export default Login;
 export async function getServerSideProps() {
   try {
     // const response = await axios.get("http://localhost:5000/users");
+    // console.log("11111111111111111111111111111111111");
+    // console.log(response.data);
+
     const response = await fetch("http://localhost:5000/users");
     const data = await response.json();
 
